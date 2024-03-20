@@ -4,6 +4,7 @@ import Title from "../shared/Title";
 import ChatList from "../specific/ChatList";
 import { sampleChats } from "../constants/sampleData";
 import { useParams } from "react-router-dom";
+import Profile from "../specific/Profile";
 
 const AppLayout = () => (WrappedComponent) => {
   return (props) => {
@@ -30,7 +31,9 @@ const AppLayout = () => (WrappedComponent) => {
           <div className="flex-grow">
             <WrappedComponent {...props} />
           </div>
-          <div className="md:flex-1 hidden md:block bg-gray-800">Third</div>
+          <div className="md:flex-1 hidden md:block bg-gray-800">
+            <Profile />
+          </div>
         </div>
       </>
     );
